@@ -7,3 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+router.get('/:name', function(req, res) {
+  var name = req.params.name;
+  res.render('index', { title: name });
+});
